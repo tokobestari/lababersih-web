@@ -1,7 +1,37 @@
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
-import { PortableText } from "@portabletext/react";
+import { PortableText, PortableTextComponents } from "@portabletext/react";
 import { getTutorialBySlug, getTutorialSlugs } from "@/sanity/queries";
+
+const portableTextComponents: PortableTextComponents = {
+  types: {
+    image: ({
+      value,
+    }: {
+      value: { asset?: { url?: string }; caption?: string };
+    }) => {
+      const url = value?.asset?.url;
+      if (!url) return null;
+      return (
+        <figure className="my-6">
+          <Image
+            src={url}
+            alt={value.caption || "Tutorial screenshot"}
+            width={800}
+            height={450}
+            className="w-full rounded-xl border border-gray-100 shadow-sm"
+          />
+          {value.caption && (
+            <figcaption className="mt-2 text-center text-xs text-gray-500">
+              {value.caption}
+            </figcaption>
+          )}
+        </figure>
+      );
+    },
+  },
+};
 
 export async function generateStaticParams() {
   const slugs = await getTutorialSlugs();
@@ -89,7 +119,7 @@ export default async function TutorialDetailPage({
         {/* Body */}
         {tutorial.body && (
           <div className="prose prose-gray mt-10 max-w-none prose-headings:font-semibold prose-h2:text-xl prose-h3:text-lg prose-p:text-gray-700 prose-p:leading-7 prose-a:text-green-600 prose-a:no-underline hover:prose-a:underline prose-img:rounded-xl prose-img:shadow-sm">
-            <PortableText value={tutorial.body} />
+            <PortableText value={tutorial.body} components={portableTextComponents} />
           </div>
         )}
       </article>
