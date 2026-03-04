@@ -45,12 +45,20 @@ export default async function TutorialPage() {
               LabaBersih
             </span>
           </Link>
-          <a
-            href="https://app.lababersih.com"
-            className="rounded-lg bg-green-600 px-4 py-2 text-sm font-medium text-white shadow-sm transition-colors hover:bg-green-700"
-          >
-            Buka Aplikasi
-          </a>
+          <div className="flex items-center gap-6">
+            <Link
+              href="/harga"
+              className="hidden text-sm font-medium text-gray-600 transition-colors hover:text-gray-900 sm:block"
+            >
+              Harga
+            </Link>
+            <a
+              href="https://app.lababersih.com"
+              className="rounded-lg bg-green-600 px-4 py-2 text-sm font-medium text-white shadow-sm transition-colors hover:bg-green-700"
+            >
+              Buka Aplikasi
+            </a>
+          </div>
         </div>
       </nav>
 

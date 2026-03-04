@@ -47,6 +47,12 @@ export default function Home() {
             >
               Tutorial
             </Link>
+            <Link
+              href="/harga"
+              className="hidden text-sm font-medium text-gray-600 transition-colors hover:text-gray-900 sm:block"
+            >
+              Harga
+            </Link>
             <a
               href="https://app.lababersih.com"
               className="rounded-lg bg-green-600 px-4 py-2 text-sm font-medium text-white shadow-sm transition-colors hover:bg-green-700"
@@ -264,6 +270,12 @@ export default function Home() {
               className="text-sm text-gray-500 transition-colors hover:text-gray-700"
             >
               Tutorial
+            </Link>
+            <Link
+              href="/harga"
+              className="text-sm text-gray-500 transition-colors hover:text-gray-700"
+            >
+              Harga
             </Link>
             <a
               href="https://app.lababersih.com"
