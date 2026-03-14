@@ -12,7 +12,7 @@ const tiers = [
     name: "Free",
     price: "Gratis",
     priceNote: "selamanya",
-    orders: "50",
+    orders: "200",
     members: "1",
     shops: "1",
     cta: "Mulai Gratis",
@@ -20,36 +20,36 @@ const tiers = [
     highlighted: false,
   },
   {
-    name: "Basic",
-    price: "Rp 499.000",
+    name: "Starter",
+    price: "Rp 149.000",
     priceNote: "/bulan",
-    orders: "2.000",
+    orders: "1.500",
     members: "3",
     shops: "3",
-    cta: "Pilih Basic",
-    href: "https://app.lababersih.com/register?tier=basic",
+    cta: "Pilih Starter",
+    href: "https://app.lababersih.com/register?tier=starter",
     highlighted: false,
   },
   {
-    name: "Suhu",
-    price: "Rp 999.000",
+    name: "Pro",
+    price: "Rp 399.000",
     priceNote: "/bulan",
-    orders: "5.000",
-    members: "7",
-    shops: "5",
-    cta: "Pilih Suhu",
-    href: "https://app.lababersih.com/register?tier=suhu",
+    orders: "8.000",
+    members: "10",
+    shops: "Unlimited",
+    cta: "Pilih Pro",
+    href: "https://app.lababersih.com/register?tier=pro",
     highlighted: true,
   },
   {
-    name: "Sultan",
-    price: "Rp 1.450.000",
+    name: "Suhu",
+    price: "Rp 1.499.000",
     priceNote: "/bulan",
-    orders: "15.000",
-    members: "15",
+    orders: "50.000",
+    members: "25",
     shops: "Unlimited",
-    cta: "Pilih Sultan",
-    href: "https://app.lababersih.com/register?tier=sultan",
+    cta: "Pilih Suhu",
+    href: "https://app.lababersih.com/register?tier=suhu",
     highlighted: false,
   },
 ];
@@ -65,12 +65,36 @@ const coreFeatures = [
   "Jurnal otomatis",
 ];
 
+const proFeatures = [
+  {
+    name: "API integration (TikTok, Mengantar)",
+    free: false,
+    starter: false,
+    pro: true,
+    suhu: true,
+  },
+  {
+    name: "Dashboard Marketing",
+    free: false,
+    starter: false,
+    pro: true,
+    suhu: true,
+  },
+  {
+    name: "AI Analytics",
+    free: false,
+    starter: false,
+    pro: false,
+    suhu: true,
+  },
+];
+
 type FeatureRow = {
   name: string;
   free: boolean;
-  basic: boolean;
+  starter: boolean;
+  pro: boolean;
   suhu: boolean;
-  sultan: boolean;
   comingSoon?: boolean;
 };
 
@@ -78,40 +102,32 @@ const reportFeatures: FeatureRow[] = [
   {
     name: "Laporan dasar (Laba Rugi, Neraca, Buku Besar)",
     free: true,
-    basic: true,
+    starter: true,
+    pro: true,
     suhu: true,
-    sultan: true,
   },
   {
     name: "Laba per produk",
     free: false,
-    basic: false,
+    starter: false,
+    pro: true,
     suhu: true,
-    sultan: true,
     comingSoon: true,
   },
   {
     name: "Laba per platform",
     free: false,
-    basic: false,
+    starter: false,
+    pro: true,
     suhu: true,
-    sultan: true,
     comingSoon: true,
   },
   {
     name: "Trend & perbandingan bulan",
     free: false,
-    basic: false,
+    starter: false,
+    pro: true,
     suhu: true,
-    sultan: true,
-    comingSoon: true,
-  },
-  {
-    name: "Export laporan pajak",
-    free: false,
-    basic: false,
-    suhu: false,
-    sultan: true,
     comingSoon: true,
   },
 ];
@@ -120,23 +136,16 @@ const supportFeatures: FeatureRow[] = [
   {
     name: "WhatsApp support",
     free: true,
-    basic: true,
+    starter: true,
+    pro: true,
     suhu: true,
-    sultan: true,
   },
   {
     name: "Priority support",
     free: false,
-    basic: false,
-    suhu: false,
-    sultan: true,
-  },
-  {
-    name: "Onboarding call",
-    free: false,
-    basic: false,
-    suhu: false,
-    sultan: true,
+    starter: false,
+    pro: true,
+    suhu: true,
   },
 ];
 
@@ -154,8 +163,8 @@ const faqs = [
     a: "Paket Free bisa dipakai selamanya — gak ada batas waktu. Kalau mau coba fitur lebih, langsung upgrade aja.",
   },
   {
-    q: "Pesanan yang dihitung apa aja?",
-    a: "Semua pesanan yang di-import ke LabaBersih dalam satu bulan. Termasuk pesanan dari Shopee, TikTok Shop, dan platform lain yang terhubung.",
+    q: "Kiriman yang dihitung apa aja?",
+    a: "Semua kiriman yang di-import ke LabaBersih dalam satu bulan. Termasuk kiriman dari Shopee, TikTok Shop, Mengantar, dan platform lain yang terhubung.",
   },
 ];
 
@@ -214,13 +223,13 @@ function FeatureTable({
                 Free
               </th>
               <th className="pb-3 px-4 text-center font-medium text-gray-500">
-                Basic
+                Starter
               </th>
               <th className="pb-3 px-4 text-center font-medium text-green-600">
-                Suhu
+                Pro
               </th>
               <th className="pb-3 px-4 text-center font-medium text-gray-500">
-                Sultan
+                Suhu
               </th>
             </tr>
           </thead>
@@ -242,17 +251,17 @@ function FeatureTable({
                 </td>
                 <td className="py-3 px-4">
                   <div className="flex justify-center">
-                    {f.basic ? <Check /> : <Cross />}
+                    {f.starter ? <Check /> : <Cross />}
+                  </div>
+                </td>
+                <td className="py-3 px-4">
+                  <div className="flex justify-center">
+                    {f.pro ? <Check /> : <Cross />}
                   </div>
                 </td>
                 <td className="py-3 px-4">
                   <div className="flex justify-center">
                     {f.suhu ? <Check /> : <Cross />}
-                  </div>
-                </td>
-                <td className="py-3 px-4">
-                  <div className="flex justify-center">
-                    {f.sultan ? <Check /> : <Cross />}
                   </div>
                 </td>
               </tr>
@@ -342,7 +351,7 @@ export default function HargaPage() {
                 <li className="flex items-center gap-2">
                   <Check />
                   <span>
-                    <span className="font-medium">{tier.orders}</span> pesanan/bulan
+                    <span className="font-medium">{tier.orders}</span> kiriman/bulan
                   </span>
                 </li>
                 <li className="flex items-center gap-2">
@@ -399,6 +408,11 @@ export default function HargaPage() {
                 </div>
               ))}
             </div>
+          </div>
+
+          {/* Pro features table */}
+          <div className="mt-12">
+            <FeatureTable title="Fitur Pro & Suhu" features={proFeatures} />
           </div>
 
           {/* Report features table */}
