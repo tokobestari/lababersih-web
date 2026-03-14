@@ -46,7 +46,7 @@ const tiers = [
     price: "Rp 1.499.000",
     priceNote: "/bulan",
     orders: "50.000",
-    members: "25",
+    members: "Unlimited",
     shops: "Unlimited",
     cta: "Pilih Suhu",
     href: "https://app.lababersih.com/register?tier=suhu",
