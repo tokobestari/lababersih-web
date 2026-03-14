@@ -58,6 +58,8 @@ const coreFeatures = [
   "Import pesanan",
   "Rekonsiliasi otomatis",
   "Hitung laba bersih",
+  "HPP FIFO",
+  "Kalkulator harga",
   "Manajemen gudang & stok",
   "Packing & fulfillment",
   "Purchase order",
