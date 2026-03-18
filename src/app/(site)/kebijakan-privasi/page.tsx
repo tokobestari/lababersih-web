@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     "Kebijakan privasi LabaBersih. Kami jelasin sejujur-jujurnya soal data kamu.",
 };
 
-const lastUpdated = "6 Maret 2026";
+const lastUpdated = "18 Maret 2026";
 
 export default function KebijakanPrivasiPage() {
   return (
@@ -234,6 +234,78 @@ export default function KebijakanPrivasiPage() {
               Kami gak pake layanan yang bisnis modelnya jualan data pengguna.
               Kalau ada perubahan vendor yang signifikan, kami akan update
               halaman ini.
+            </p>
+
+            <h3 className="mt-6 text-base font-bold text-gray-900">
+              Integrasi platform iklan & marketplace
+            </h3>
+            <p className="mt-2 text-sm leading-7 text-gray-700">
+              Kalau kamu menghubungkan akun platform iklan atau marketplace ke
+              LabaBersih, kami mengakses data berikut{" "}
+              <span className="font-medium text-gray-900">
+                atas izin kamu (OAuth)
+              </span>
+              :
+            </p>
+            <div className="mt-4 space-y-3">
+              {[
+                {
+                  title: "Google Ads",
+                  desc: "Data pengeluaran iklan harian (spend, impressions, clicks, CPC, CPM). Read-only — kami tidak membuat atau mengubah campaign.",
+                },
+                {
+                  title: "Meta / Facebook Ads",
+                  desc: "Data pengeluaran iklan harian (spend, impressions, clicks). Diakses melalui Meta Marketing API. Read-only.",
+                },
+                {
+                  title: "TikTok Ads",
+                  desc: "Data spend GMV Max dan Web Conversion (cost, impressions, clicks). Read-only.",
+                },
+                {
+                  title: "TikTok Shop & Shopee",
+                  desc: "Data pesanan, settlement, dan return untuk sinkronisasi otomatis ke dashboard.",
+                },
+              ].map((item) => (
+                <div
+                  key={item.title}
+                  className="rounded-xl border border-gray-100 bg-white px-5 py-4 shadow-sm"
+                >
+                  <h4 className="text-sm font-semibold text-gray-900">
+                    {item.title}
+                  </h4>
+                  <p className="mt-1 text-sm leading-6 text-gray-600">
+                    {item.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
+            <p className="mt-4 text-sm leading-7 text-gray-700">
+              Data dari platform ini{" "}
+              <span className="font-medium text-gray-900">
+                hanya digunakan untuk dashboard marketing di LabaBersih
+              </span>
+              . Kami tidak membagikan data platform-mu ke pihak lain. Kamu bisa
+              mencabut akses kapan saja dari halaman Pengaturan &gt; Integrasi.
+            </p>
+          </div>
+
+          {/* Penghapusan Data */}
+          <div>
+            <h2 className="text-xl font-bold text-gray-900 lg:text-2xl">
+              Penghapusan data
+            </h2>
+            <p className="mt-3 text-sm leading-7 text-gray-700">
+              Kamu bisa meminta penghapusan seluruh data akun kamu kapan saja
+              dengan menghubungi{" "}
+              <a
+                href="mailto:halo@lababersih.com"
+                className="font-medium text-green-600 hover:text-green-700"
+              >
+                halo@lababersih.com
+              </a>
+              . Setelah permintaan diterima, kami akan menghapus semua data
+              secara permanen dalam maksimal 30 hari. Ini termasuk data akun,
+              data bisnis, dan data dari integrasi platform pihak ketiga.
             </p>
           </div>
 
