@@ -229,7 +229,7 @@ export default function SyaratKetentuanPage() {
               LabaBersih
             </span>
           </Link>
-          <div className="flex items-center gap-6">
+          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
             <Link
               href="/tentang"
               className="text-sm text-gray-500 transition-colors hover:text-gray-700"
@@ -247,6 +247,12 @@ export default function SyaratKetentuanPage() {
               className="text-sm text-gray-500 transition-colors hover:text-gray-700"
             >
               Syarat
+            </Link>
+            <Link
+              href="/pengembalian-dana"
+              className="text-sm text-gray-500 transition-colors hover:text-gray-700"
+            >
+              Refund
             </Link>
             <a
               href="https://app.lababersih.com"

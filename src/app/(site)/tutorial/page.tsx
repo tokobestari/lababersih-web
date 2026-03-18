@@ -137,6 +137,38 @@ export default async function TutorialPage() {
               LabaBersih
             </span>
           </Link>
+          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
+            <Link
+              href="/tentang"
+              className="text-sm text-gray-500 transition-colors hover:text-gray-700"
+            >
+              Tentang
+            </Link>
+            <Link
+              href="/kebijakan-privasi"
+              className="text-sm text-gray-500 transition-colors hover:text-gray-700"
+            >
+              Privasi
+            </Link>
+            <Link
+              href="/syarat-ketentuan"
+              className="text-sm text-gray-500 transition-colors hover:text-gray-700"
+            >
+              Syarat
+            </Link>
+            <Link
+              href="/pengembalian-dana"
+              className="text-sm text-gray-500 transition-colors hover:text-gray-700"
+            >
+              Refund
+            </Link>
+            <a
+              href="https://app.lababersih.com"
+              className="text-sm text-gray-500 transition-colors hover:text-gray-700"
+            >
+              Aplikasi
+            </a>
+          </div>
           <p className="text-xs text-gray-400">
             &copy; {new Date().getFullYear()} LabaBersih
           </p>
