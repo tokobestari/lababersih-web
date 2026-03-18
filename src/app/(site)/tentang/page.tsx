@@ -190,10 +190,10 @@ export default function TentangPage() {
                   <p className="mt-0.5">
                     Email:{" "}
                     <a
-                      href="mailto:halo@lababersih.com"
+                      href="mailto:cs@lababersih.com"
                       className="font-medium text-green-600 hover:text-green-700"
                     >
-                      halo@lababersih.com
+                      cs@lababersih.com
                     </a>
                   </p>
                   <p>Telepon: +62 812 7075 3975</p>

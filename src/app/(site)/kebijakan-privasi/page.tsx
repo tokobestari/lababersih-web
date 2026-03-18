@@ -298,10 +298,10 @@ export default function KebijakanPrivasiPage() {
               Kamu bisa meminta penghapusan seluruh data akun kamu kapan saja
               dengan menghubungi{" "}
               <a
-                href="mailto:halo@lababersih.com"
+                href="mailto:cs@lababersih.com"
                 className="font-medium text-green-600 hover:text-green-700"
               >
-                halo@lababersih.com
+                cs@lababersih.com
               </a>
               . Setelah permintaan diterima, kami akan menghapus semua data
               secara permanen dalam maksimal 30 hari. Ini termasuk data akun,
@@ -391,10 +391,10 @@ export default function KebijakanPrivasiPage() {
               <p className="text-sm text-gray-700">
                 Email:{" "}
                 <a
-                  href="mailto:halo@lababersih.com"
+                  href="mailto:cs@lababersih.com"
                   className="font-medium text-green-600 hover:text-green-700"
                 >
-                  halo@lababersih.com
+                  cs@lababersih.com
                 </a>
               </p>
             </div>

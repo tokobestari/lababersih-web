@@ -191,7 +191,7 @@ export default function PengembalianDanaPage() {
                 {
                   step: "1",
                   title: "Hubungi kami",
-                  desc: "Kirim email ke halo@lababersih.com atau WhatsApp ke +62 812 7075 3975 dengan subjek \"Refund\".",
+                  desc: "Kirim email ke cs@lababersih.com atau WhatsApp ke +62 812 7075 3975 dengan subjek \"Refund\".",
                 },
                 {
                   step: "2",
@@ -237,10 +237,10 @@ export default function PengembalianDanaPage() {
                 <p>
                   Email:{" "}
                   <a
-                    href="mailto:halo@lababersih.com"
+                    href="mailto:cs@lababersih.com"
                     className="font-medium text-green-600 hover:text-green-700"
                   >
-                    halo@lababersih.com
+                    cs@lababersih.com
                   </a>
                 </p>
                 <p>WhatsApp: +62 812 7075 3975</p>
