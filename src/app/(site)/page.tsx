@@ -255,50 +255,46 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="border-t border-gray-100 py-10">
-        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-6 sm:flex-row">
-          <div className="flex items-center gap-2">
-            <div className="flex h-6 w-6 items-center justify-center rounded bg-green-600 text-xs font-bold text-white">
-              L
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="flex flex-col gap-8 sm:flex-row sm:justify-between">
+            {/* Brand */}
+            <div>
+              <div className="flex items-center gap-2">
+                <div className="flex h-6 w-6 items-center justify-center rounded bg-green-600 text-xs font-bold text-white">
+                  L
+                </div>
+                <span className="text-sm font-medium text-gray-900">LabaBersih</span>
+              </div>
+              <p className="mt-2 text-xs text-gray-400">&copy; {new Date().getFullYear()} LabaBersih</p>
             </div>
-            <span className="text-sm font-medium text-gray-900">
-              LabaBersih
-            </span>
+
+            {/* Links */}
+            <div className="flex gap-12">
+              <div>
+                <p className="text-xs font-medium text-gray-500">Fitur</p>
+                <div className="mt-2 flex flex-col gap-1.5">
+                  <Link href="/fitur/google-ads-capi" className="text-sm text-gray-600 transition-colors hover:text-gray-900">Google Ads CAPI</Link>
+                </div>
+              </div>
+              <div>
+                <p className="text-xs font-medium text-gray-500">Produk</p>
+                <div className="mt-2 flex flex-col gap-1.5">
+                  <Link href="/harga" className="text-sm text-gray-600 transition-colors hover:text-gray-900">Harga</Link>
+                  <Link href="/tutorial" className="text-sm text-gray-600 transition-colors hover:text-gray-900">Tutorial</Link>
+                  <a href="https://app.lababersih.com" className="text-sm text-gray-600 transition-colors hover:text-gray-900">Aplikasi</a>
+                </div>
+              </div>
+              <div>
+                <p className="text-xs font-medium text-gray-500">Legal</p>
+                <div className="mt-2 flex flex-col gap-1.5">
+                  <Link href="/tentang" className="text-sm text-gray-600 transition-colors hover:text-gray-900">Tentang</Link>
+                  <Link href="/kebijakan-privasi" className="text-sm text-gray-600 transition-colors hover:text-gray-900">Privasi</Link>
+                  <Link href="/syarat-ketentuan" className="text-sm text-gray-600 transition-colors hover:text-gray-900">Syarat</Link>
+                  <Link href="/pengembalian-dana" className="text-sm text-gray-600 transition-colors hover:text-gray-900">Refund</Link>
+                </div>
+              </div>
+            </div>
           </div>
-          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
-            <Link
-              href="/tentang"
-              className="text-sm text-gray-500 transition-colors hover:text-gray-700"
-            >
-              Tentang
-            </Link>
-            <Link
-              href="/kebijakan-privasi"
-              className="text-sm text-gray-500 transition-colors hover:text-gray-700"
-            >
-              Privasi
-            </Link>
-            <Link
-              href="/syarat-ketentuan"
-              className="text-sm text-gray-500 transition-colors hover:text-gray-700"
-            >
-              Syarat
-            </Link>
-            <Link
-              href="/pengembalian-dana"
-              className="text-sm text-gray-500 transition-colors hover:text-gray-700"
-            >
-              Refund
-            </Link>
-            <a
-              href="https://app.lababersih.com"
-              className="text-sm text-gray-500 transition-colors hover:text-gray-700"
-            >
-              Aplikasi
-            </a>
-          </div>
-          <p className="text-xs text-gray-400">
-            &copy; {new Date().getFullYear()} LabaBersih
-          </p>
         </div>
       </footer>
     </div>
