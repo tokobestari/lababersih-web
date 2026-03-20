@@ -78,7 +78,7 @@ export default function Home() {
         </p>
         <div className="mt-8 flex flex-col gap-3 sm:flex-row">
           <a
-            href="https://app.lababersih.com"
+            href="https://app.lababersih.com/register"
             className="rounded-lg bg-green-600 px-6 py-3 text-center text-sm font-medium text-white shadow-sm transition-colors hover:bg-green-700"
           >
             Coba Gratis — Tanpa Kartu Kredit
@@ -245,7 +245,7 @@ export default function Home() {
             Gratis, tanpa kartu kredit. Langsung pakai hari ini.
           </p>
           <a
-            href="https://app.lababersih.com"
+            href="https://app.lababersih.com/register"
             className="mt-8 inline-block rounded-lg bg-white px-8 py-3.5 text-sm font-semibold text-green-700 shadow-sm transition-colors hover:bg-green-50"
           >
             Mulai Sekarang
