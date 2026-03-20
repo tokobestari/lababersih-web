@@ -117,10 +117,10 @@ export default function GoogleAdsCAPIPage() {
           Google Ads CAPI + Reporting
         </span>
         <h1 className="mt-6 text-3xl font-bold leading-tight text-gray-900 lg:text-5xl lg:leading-tight">
-          Google Ads tau mana iklan<br className="hidden lg:block" /> yang menghasilkan penjualan
+          Google Ads CAPI yang<br className="hidden lg:block" /> gak ribet dan gak mahal
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-gray-600">
-          Data pembelian real otomatis terkirim ke Google Ads. Campaign jadi lebih pintar, budget lebih efisien — tanpa setup ribet.
+          Sampai hari ini, belum ada layanan CAPI untuk Google Ads yang mudah dipakai. Yang ada: setup rumit, butuh developer, atau bayar per event lewat tools seperti Stape.io. LabaBersih bikin ini jadi 5 menit — copy script, paste, selesai. Tanpa biaya per event.
         </p>
         <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
           <a href="https://app.lababersih.com/register" className="rounded-lg bg-green-600 px-6 py-3 text-sm font-medium text-white shadow-sm transition-colors hover:bg-green-700">
