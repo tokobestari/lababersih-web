@@ -83,6 +83,20 @@ const proFeatures = [
     suhu: true,
   },
   {
+    name: "Google Ads CAPI + Reporting",
+    free: false,
+    starter: false,
+    pro: true,
+    suhu: true,
+  },
+  {
+    name: "Facebook Ads Reporting",
+    free: false,
+    starter: false,
+    pro: true,
+    suhu: true,
+  },
+  {
     name: "AI Analytics",
     free: false,
     starter: false,
