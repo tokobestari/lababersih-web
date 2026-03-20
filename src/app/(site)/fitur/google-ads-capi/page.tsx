@@ -120,7 +120,7 @@ export default function GoogleAdsCAPIPage() {
           Google Ads CAPI yang<br className="hidden lg:block" /> gak ribet dan gak mahal
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-gray-600">
-          Sampai hari ini, belum ada layanan CAPI untuk Google Ads yang mudah dipakai. Yang ada: setup rumit, butuh developer, atau bayar per event lewat tools seperti Stape.io. LabaBersih bikin ini jadi 5 menit — copy script, paste, selesai. Tanpa biaya per event.
+          Layanan CAPI untuk Google Ads biasanya butuh developer, setup rumit, dan biaya mahal. LabaBersih bikin ini jadi 5 menit — copy script, paste, selesai.
         </p>
         <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
           <a href="https://app.lababersih.com/register" className="rounded-lg bg-green-600 px-6 py-3 text-sm font-medium text-white shadow-sm transition-colors hover:bg-green-700">
